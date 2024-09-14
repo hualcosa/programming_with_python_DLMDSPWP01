@@ -3,9 +3,6 @@ from bokeh.layouts import gridplot
 from bokeh.io import output_notebook
 import pandas as pd
 
-# Initialize notebook output for Bokeh
-output_notebook()
-
 
 def visualize_data(
     df_train: pd.DataFrame,
@@ -55,9 +52,6 @@ def visualize_data(
             line_width=2,
         )
 
-    # Show the plot for training data and ideal functions
-    show(p)
-
     # Create a separate figure for Test Data and Deviations
     p_test = figure(
         title="Test Data Mapping",
@@ -91,9 +85,6 @@ def visualize_data(
                 legend_label=f"Ideal {row['mapped_ideal']}",
             )
 
-    # Show the plot for test data and deviations
-    show(p_test)
-
-    # Optionally, combine the plots into a grid for better visualization
+    # Combine the plots into a grid for better visualization
     grid = gridplot([[p, p_test]])
     show(grid)

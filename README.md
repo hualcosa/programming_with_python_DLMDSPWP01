@@ -1,10 +1,10 @@
 # Programming with Python Project
 
-This project demonstrates the use of training datasets to match ideal functions, followed by mapping test data points to the selected ideal functions. The core logic is implemented in Python and leverages data visualization, database handling, and unit testing.
+This my final project for the course DLMDSPWP01 (Programming with Python) at IU University's Master of Artificial Intelligence. It demonstrates the use of training datasets to match ideal functions, followed by mapping test data points to the selected ideal functions.
 
 ## Project Description
 
-The objective of the project is to use training data to select the best matching ideal functions from a set of 50 functions based on the least-squares method. Afterward, test data points are mapped to the selected ideal functions, with deviations recorded and visualized.
+The objective of the project is to use a training data to select the best matching ideal functions from a set of 50 functions based on the least-squares method. Afterward, test data points are mapped to the selected ideal functions, with deviations recorded and visualized.
 
 The project includes:
 - **Data Handling** using `pandas` and `SQLAlchemy`.
@@ -31,7 +31,7 @@ The project includes:
    The program visualizes the training datasets, the selected ideal functions, the test data, and the corresponding deviations using Bokeh, a Python data visualization library.
 
 5. **Exception Handling**:
-   The program implements both standard and user-defined exception handling to ensure robustness and clear error reporting during data loading, processing, and visualization.
+   The program implements both standard and user-defined exception handling to ensure robustness and clear error reporting.
 
 6. **Unit Testing**:
    Comprehensive unit tests are written for the major components of the project, including:
@@ -55,8 +55,7 @@ The project includes:
 │   ├── test_data_mapper.py  # Logic for mapping test data to ideal functions
 │   ├── visualize.py         # Visualization logic using Bokeh
 ├── EDA.ipynb            # Exploratory Data Analysis notebook
-├── main.py              # CLI program for data handling and visualization
-├── test.ipynb           # Jupyter notebook for testing
+├── solution.ipynb # main file. Contains the solution of the problem
 ├── unit_tests.py        # Unit tests for all core functionalities
 └── README.md            # Project readme (you're reading this file!)
 ```
@@ -65,7 +64,7 @@ The project includes:
 
 1. Clone the repository:
     ```bash
-    git clone <repo_url> ### CHANGE
+    git clone https://github.com/hualcosa/programming_with_python_DLMDSPWP01
     ```
 2. Navigate into the project directory:
     ```bash
@@ -76,37 +75,20 @@ The project includes:
     ```bash
     pip install -r requirements.txt ### add
     ```
-4. Ensure you have a Python environment with the following key libraries:
-   - `pandas`
-   - `SQLAlchemy`
-   - `Bokeh`
-   - `unittest`
-
-5. Ensure your Python version is compatible (Python 3.7 or higher is recommended).
+4. Ensure your Python version is compatible (Python 3.10 or higher is recommended).
 
 ## Usage
 
-### Running the CLI
+### Running the solution
 
-You can run the project from the command line using the `main.py` script. The command-line interface (CLI) allows you to:
+you can run the solution by running the notebook `solution.ipynb`
+
+In this notebook, you will:
 - Load the training, ideal, and test data.
 - Run the least-squares selection process.
 - Map test data to the ideal functions.
 - Visualize the results.
 
-Example usage:
-
-```bash
-python main.py --train datasets1/train.csv --ideal datasets1/ideal.csv --test datasets1/test.csv --visualize
-```
-
-This command will:
-- Load the datasets.
-- Perform the least-squares matching.
-- Map test data to the best-fit ideal functions.
-- Generate visualizations if the `--visualize` flag is provided.
-
-You can also specify a different SQLite database file using the `--db` flag (default: `localDB.db`).
 
 ### Running Unit Tests
 
@@ -122,11 +104,12 @@ This will execute all the tests in `unit_tests.py` with detailed output.
 
 ### Visualization
 
-The project includes visualization capabilities using Bokeh. When you run the CLI with the `--visualize` flag, interactive plots will be generated to show the following:
+The project includes visualization capabilities using Bokeh. When you run the `solution.ipynb`, interactive plots will be generated to show the following:
 - The training datasets.
 - The selected ideal functions.
 - The mapped test data and the corresponding deviations.
-
+  
+![alt text](image.png)
 
 ## License
 
@@ -137,4 +120,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any questions or suggestions, please contact:
 
 - **Name**: Hugo Albuquerque Cosme da Silva
-- **Email**: hualcosa@gmail.com
+- **Email**: hugo.silva@iu-study.org
